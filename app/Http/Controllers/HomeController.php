@@ -10,8 +10,8 @@ class HomeController extends Controller
     public function index()
     {
         $banner = Banner::all();
-        dd($banner);
-        return view('welcome');
+        return view('welcome',compact('banner'));
     }
+
 
 }
