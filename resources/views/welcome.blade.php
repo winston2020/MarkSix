@@ -1,95 +1,66 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.app')
 
-        <title>Laravel</title>
+@section('body')
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+    <div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider='{}'  style="margin-top: 10px">
+        <ul class="am-slides">
+            @foreach($banner as $item)
+                <li>
+                    <img src="{{url($item->banner_url)}}">
+                </li>
+            @endforeach
+        </ul>
+    </div>
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+    <ul data-am-widget="gallery" class="am-gallery am-avg-sm-2
+  am-avg-md-3 am-avg-lg-4 am-gallery-default" data-am-gallery="{ pureview: false }" >
+        <li>
+            <div class="am-gallery-item">
+                <a href="/msssc" class="">
+                    <img src="{{url('images/b10.jpg')}}"  alt="秒速时时彩"/>
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                </a>
             </div>
-        </div>
-    </body>
-</html>
+        </li>
+        <li>
+            <div class="am-gallery-item">
+                <a href="/mssc" class="">
+                    <img src="{{url('images/b9.jpg')}}"  alt="秒速赛车"/>
+
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="am-gallery-item">
+                <a href="/video/news" class="">
+                    <img src="{{url('images/b5.jpg')}}"  alt="最新上传"/>
+
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="am-gallery-item">
+                <a href="/video/hots" class="">
+                    <img src="{{url('images/b6.jpg')}}"  alt="热门视频"/>
+
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="am-gallery-item">
+                <a href="/video/laughs" class="">
+                    <img src="{{url('images/b7.jpg')}}"  alt="搞笑视频"/>
+
+                </a>
+            </div>
+        </li>
+        <li>
+            <div class="am-gallery-item">
+                <a href="video/star" class="">
+                    <img src="{{url('images/b8.jpg')}}"  alt="网红自拍"/>
+
+                </a>
+            </div>
+        </li>
+    </ul>
+    @endsection
