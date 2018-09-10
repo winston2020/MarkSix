@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class UserControllerr extends Controller
+class MsscController extends Controller
 {
     public function index()
     {
-        return view('user.index');
+        return view('reward.msssc.index');
     }
 }
