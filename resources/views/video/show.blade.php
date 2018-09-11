@@ -2,7 +2,8 @@
 
 @section('body')
 
-    <video controls="controls" poster="{{$video->video_img_url}}" autoplay="autoplay" style="width: 100%; height: auto;"><source src="http://cdn.ikood.cn/data/video/2017112822/1511879821411/1511879821411.mp4" type="video/mp4">
+    <video controls="controls" poster="{{$video->video_img_url}}" autoplay="autoplay" style="width: 100%; height: auto;margin-top: 10px">
+        <source src="{{$video->video_url}}" type="video/mp4">
         <source src="{{$video->video_url}}" type="video/ogg">
         <source src="{{$video->video_url}}" type="video/webm">
         <object data="{{$video->video_url}}">

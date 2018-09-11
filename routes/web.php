@@ -33,6 +33,6 @@ Route::group(['middleware'=>['web']],function(){
     Route::post('reward/msssc/add','MssscController@createinstallments');
 
     Route::get('msssc','MssscController@index');
-    Route::get('mssc','MssscController@index');
+    Route::get('mssc','MsscController@index');
 
 });
