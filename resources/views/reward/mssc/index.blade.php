@@ -109,9 +109,6 @@
                     <div class="mint-tab-item-label">两面</div>
                 </a> <a class="mint-tab-item">
                     <div class="mint-tab-item-icon"></div>
-                    <div class="mint-tab-item-label">冠亚和</div>
-                </a> <a class="mint-tab-item">
-                    <div class="mint-tab-item-icon"></div>
                     <div class="mint-tab-item-label">1-5名</div>
                 </a> <a class="mint-tab-item">
                     <div class="mint-tab-item-icon"></div>
