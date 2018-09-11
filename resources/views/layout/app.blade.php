@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="{{url('css/amazeui.min.css')}}"/>
     <link rel="stylesheet" href="{{url('css/admin.css')}}">
 </head>
-<body>
+<body style=" overflow-y:auto;">
 <header data-am-widget="header"
         class="am-header am-header-default">
     <div class="am-header-left am-header-nav">
@@ -29,7 +29,7 @@
     </div>
 
     <h1 class="am-header-title">
-        <a href="#title-link" class="">
+        <a href="#" class="">
             9527视频娱乐
         </a>
     </h1>
@@ -59,30 +59,31 @@
 <div class="am-navbar am-navbar-default" data-am-widget="navbar">
     <ul class="am-navbar-nav am-cf am-avg-sm-3"><!--导航条是否隐藏多余项的关键参数-->
         <li>
-            <a href="#">
+            <a href="/active">
                 <span class="am-icon-home"></span>
                 <span class="am-navbar-label">活动</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/reward">
                 <span class="am-icon-user-md"></span>
                 <span class="am-navbar-label">开奖</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/money">
                 <span class="am-icon-star"></span>
                 <span class="am-navbar-label">赚钱</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/user">
                 <span class="am-icon-share-square-o"></span>
                 <span class="am-navbar-label">会员</span>
             </a>
         </li>
     </ul>
+</div>
 
     <!--[if lt IE 9]>
     <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>

@@ -8,6 +8,6 @@ class MsscController extends Controller
 {
     public function index()
     {
-        return view('reward.msssc.index');
+        return view('reward.mssc.index');
     }
 }
