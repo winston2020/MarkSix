@@ -15,6 +15,8 @@ Route::get('','HomeController@index');
 Route::get('login','UserController@login');
 Route::get('regist','UserController@regist');
 Route::get('active','ActiveController@index');
+Route::get('tixian','UserController@tixian');
+Route::get('geren','UserController@geren');
 Route::get('money','MoneyController@index');
 Route::get('user','UserController@index');
 Route::get('reward;','RewardController@index');

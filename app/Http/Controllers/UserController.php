@@ -18,7 +18,14 @@ class UserController extends Controller
     {
         return view('user.login');
     }
-
+    public function tixian()
+    {
+        return view('user.tixian');
+    }
+    public function geren()
+    {
+        return view('user.geren');
+    }
     public function dologin(Request $request)
     {
         $username = $request->input('name');
