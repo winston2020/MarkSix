@@ -14,10 +14,10 @@
 Route::get('','HomeController@index');
 Route::get('login','UserController@login');
 Route::get('regist','UserController@regist');
-Route::get('active','HomeController@index');
-Route::get('money','HomeController@index');
-Route::get('user','HomeController@index');
-Route::get('reward;','HomeController@index');
+Route::get('active','ActiveController@index');
+Route::get('money','MoneyController@index');
+Route::get('user','UserController@index');
+Route::get('reward;','RewardController@index');
 Route::get('reward/msssc','RewardController@index');
 
 
