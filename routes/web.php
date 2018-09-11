@@ -25,7 +25,12 @@ Route::group(['middleware'=>['web']],function(){
     Route::get('/','HomeController@index');
     Route::post('user/login','UserController@dologin');
     Route::post('user/regist','UserController@doregist');
+    Route::get('video/id/{id}','VideoController@show');
+    Route::get('video/{tag}','VideoController@videolist');
+
+    Route::post('reward/msssc/add','MssscController@createinstallments');
 
     Route::get('msssc','MssscController@index');
     Route::get('mssc','MssscController@index');
+
 });

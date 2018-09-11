@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Banner extends Model
+class Msssc extends Model
 {
-    protected $table ='banner';
+    protected $table ='msssc';
 
 }
