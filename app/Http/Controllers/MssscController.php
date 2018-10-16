@@ -17,6 +17,7 @@ class MssscController extends Controller
          $day = date('Y-m-d');
          $msssc = Msssc::where('created_at','like','%'.$day.'%')->orderby('id','desc')->first();
          $day = date('Ymd');
+         dd($day);
          if (empty($msssc)){
              $number = 1;
              $installment = $day.$number;

@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="{{url('css/msssc.css')}}">
     <link rel="stylesheet" href="{{url('css/amazeui.min.css')}}"/>
+    <script src="{{url('js/jquery.min.js')}}"></script>
     <title>秒速时时彩</title>
 </head>
 <body>
 <div id="app">
     <div class="page-tabbar">
-
-
         <header data-am-widget="header"
                 class="am-header am-header-default">
             <div class="am-header-left am-header-nav">
-                <span style="font-size: 15px">首页</span>
+                <span style="font-size: 15px" id="gohome">首页</span>
             </div>
+            <script>
+                $('#gohome').click(function(){
+                    window.location.href ='{{url('')}}';
+                });
+            </script>
 
             <h1 class="am-header-title">
                 <a href="#" class="">
@@ -28,9 +32,8 @@
                 {{--{{\Illuminate\Support\Facades\Auth::user()->price}}金币--}}
                 <span style="font-size: 15px">0.00金币</span>
             </div>
+
         </header>
-
-
 
         <div style="border: 1px solid rgb(214, 214, 214); margin-top: 5px; margin-bottom: 5px; font-size: 14px;">
             <table style="width: 100%; padding: 10px;">

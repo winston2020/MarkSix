@@ -59,7 +59,7 @@
 <div class="am-navbar am-navbar-default" data-am-widget="navbar">
     <ul class="am-navbar-nav am-cf am-avg-sm-3"><!--导航条是否隐藏多余项的关键参数-->
         <li>
-            <a href="/active">
+            <a href="/">
                 <span class="am-icon-home"></span>
                 <span class="am-navbar-label">活动</span>
             </a>

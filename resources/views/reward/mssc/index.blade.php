@@ -4,7 +4,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="{{url('css/msssc.css')}}">
     <link rel="stylesheet" href="{{url('css/amazeui.min.css')}}"/>
-
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <title>8848娱乐视频</title>
 </head>
@@ -15,7 +14,7 @@
         <header data-am-widget="header"
                 class="am-header am-header-default">
             <div class="am-header-left am-header-nav">
-                <span style="font-size: 15px">首页</span>
+                <span style="font-size: 15px"><a href="{{url('')}}">首页</a></span>
             </div>
 
             <h1 class="am-header-title">
