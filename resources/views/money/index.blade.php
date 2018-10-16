@@ -37,7 +37,7 @@
     <tr>
         <td><a href="/money">我要赚钱</a></td>
         <td><a href="/active">在线充值</a></td>
-        <td><a href="#">立即提现</a></td>
+        <td><a href="/tixian">立即提现</a></td>
     </tr>
 </table>
 <img src="{{url('images/zq1.jpg')}}" class="am-img-responsive" alt=""/>

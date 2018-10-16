@@ -26,7 +26,7 @@
             <i class="am-header-icon am-icon-home"></i>
         @else
             <a href="/regist" class="">
-                << <a href="#">返回</a>
+                &rightleftharpoons; <a href="/" style="font-size: 0.8rem">返回</a>
             </a>
         @endif
     </div>
@@ -47,7 +47,7 @@
         </div>
         <button id="login" type="submit">登 陆</button>
     </form>
-    <a href="#">
+    <a href="/regist">
         <button type="button" class="register-tis">还有没有账号？</button>
     </a>
 </div>

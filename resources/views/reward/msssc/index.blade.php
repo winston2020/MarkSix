@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="{{url('css/amazeui.min.css')}}"/>
     <script src="{{url('js/jquery.min.js')}}"></script>
     <title>秒速时时彩</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="{{url('js/amazeui.ie8polyfill.min.js')}}"></script>
+    <script src="{{url('js/amazeui.min.js')}}"></script>
+    <script src="{{url('js/app.js')}}"></script>
+    <script src="{{url('js/jquery.min.js')}}"></script>
+    <style>
+        .selected{
+            background: red;
+        }
+
+    </style>
 </head>
 <body>
 <div id="app">
@@ -81,19 +93,15 @@
                 </tr>
             </table>
         </div>
-        <div class="page-wrap">
-            <div class="mint-navbar page-navbar"><a class="mint-tab-item is-selected">
-                    <div class="mint-tab-item-icon"></div>
-                    <div class="mint-tab-item-label">两面</div>
-                </a> <a class="mint-tab-item">
-                    <div class="mint-tab-item-icon"></div>
-                    <div class="mint-tab-item-label">1-5球</div>
-                </a> <a class="mint-tab-item">
-                    <div class="mint-tab-item-icon"></div>
-                    <div class="mint-tab-item-label">前中后</div>
-                </a></div>
-            <div class="mint-tab-container page-tabbar-container" style="padding-bottom: 230px;">
-                <div class="mint-tab-container-wrap">
+        <div class="am-tabs" data-am-tabs >
+            <ul class="am-tabs-nav am-nav am-nav-tabs">
+                <li class="am-active"><a href="#tab1">两面</a></li>
+                <li><a href="#tab2">1-5球</a></li>
+                <li><a href="#tab3">前中后</a></li>
+            </ul>
+
+            <div class="am-tabs-bd" style=" overflow-y:auto;">
+                <div class="am-tab-panel am-fade am-in am-active" id="tab1">
                     <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214);">
                         <ul style="padding: 5px;">
                             <li class="container-li3"><p
@@ -241,8 +249,10 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214); display: none;">
-                        <ul style="padding: 5px;">
+                </div>
+                <div class="am-tab-panel am-fade" id="tab2" >
+                    <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214); " >
+                        <ul style="padding: 5px;" >
                             <li class="container-li3"><p style="text-align: center; font-size: 14px;">第一球</p></li>
                             <li class="container-li2">
                                 <button class="mint-button mint-button--default mint-button--large" id="105002001">
@@ -294,7 +304,7 @@
                                     <!----> <label class="mint-button-text">9 <span
                                                 style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
                             </li>
-                            <li class="container-li3"><p style="text-align: center; font-size: 14px;">第二球</p></li>
+                            <li class="container-li3" ><p style="text-align: center; font-size: 14px;">第二球</p></li>
                             <li class="container-li2">
                                 <button class="mint-button mint-button--default mint-button--large" id="105002011">
                                     <!----> <label class="mint-button-text">0 <span
@@ -345,7 +355,7 @@
                                     <!----> <label class="mint-button-text">9 <span
                                                 style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
                             </li>
-                            <li class="container-li3"><p style="text-align: center; font-size: 14px;">第三球</p></li>
+                            <li class="container-li3" ><p style="text-align: center; font-size: 14px;">第三球</p></li>
                             <li class="container-li2">
                                 <button class="mint-button mint-button--default mint-button--large" id="105002021">
                                     <!----> <label class="mint-button-text">0 <span
@@ -500,7 +510,9 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214); display: none;">
+                </div>
+                <div class="am-tab-panel am-fade" id="tab3">
+                    <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214); ">
                         <ul style="padding: 5px;">
                             <li class="container-li3"><p style="text-align: center; font-size: 14px;">前三</p></li>
                             <li class="container-li2">
@@ -585,10 +597,10 @@
                 </div>
             </div>
         </div>
-        <div class="bottom-bar">
+        <div class="bottom-bar" style="z-index: 999">
             <ul style="padding: 0px; margin: 0px;">
                 <li style="float: left; margin-left: 3px; margin-top: 3px; margin-bottom: 5px; list-style-type: none;">
-                    <span style="line-height: 48px; color: red;">已选择 0 注</span></li>
+                    <span style="line-height: 48px; color: red;">已选择 <span id="number"></span> 注</span></li>
                 <li style="float: left; margin-bottom: 5px; margin-top: 3px; list-style-type: none;">
                     <div style="height: 48px; width: 100%; margin: 0px 0px 0px 3px; padding: 0px;"><a
                                 class="mint-cell mint-field is-nolabel"
@@ -608,8 +620,8 @@
                             <div class="mint-cell-right"></div> <!----></a></div>
                 </li>
                 <li style="float: right; margin-right: 3px; margin-top: 9px; list-style-type: none;">
-                    <button class="mint-button mint-button--danger mint-button--normal"><!----> <label
-                                class="mint-button-text">重置</label></button>
+                    <button class="mint-button mint-button--danger mint-button--normal" id="restart"><!----> <label
+                                class="mint-button-text" >重置</label></button>
                 </li>
                 <li style="float: right; margin-right: 3px; margin-top: 9px; list-style-type: none;">
                     <button class="mint-button mint-button--primary mint-button--normal"><!----> <label
@@ -618,8 +630,18 @@
         </div>
     </div>
 </div>
-
-
+<script>
+    $(".mint-tab-container-item>ul>li>button").click(function(){
+        $(this).toggleClass("selected");
+    })
+</script>
+<script>
+    ppp=function(){
+        var idnumber=$('.selected');
+        $("#number").text(idnumber.length)
+    }
+    var t2 = window.setInterval("ppp()",200);
+</script>
 <div class="mint-msgbox-wrapper" style="position: absolute; z-index: 2005;">
     <div class="mint-msgbox" style="display: none;">
         <div class="mint-msgbox-header">
@@ -631,5 +653,6 @@
         </div>
     </div>
 </div>
+
 </body>
 </html>

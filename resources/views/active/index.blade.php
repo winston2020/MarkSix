@@ -36,8 +36,8 @@
 <table class="am-table">
     <tr>
         <td><a href="/money">我要赚钱</a></td>
-        <td><a href="#">在线充值</a></td>
-        <td><a href="#">立即提现</a></td>
+        <td><a href="/active">在线充值</a></td>
+        <td><a href="/tixian">立即提现</a></td>
     </tr>
 </table>
 <button type="button" class="am-btn am-btn-primary am-btn-block am-round">支付宝充值</button>

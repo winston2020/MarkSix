@@ -20,8 +20,8 @@
             margin-top: 3rem;
         }
         .am-u-sm-4>img{
-            width: 2rem;
-            width: 2rem;
+            width: 10rem;
+            width: 10rem;
         }
         tr>td{
             text-align: center;
@@ -29,10 +29,16 @@
         tr>td>a{
             color: orangered;
         }
+        .am-g-fixed {
+            max-width: 1000px;
+        }
+        div{
+            font-weight: bold;
+        }
     </style>
 </head>
 <body style=" overflow-y:auto;">
-<img src="{{url('banner/banner1.jpg')}}" class="am-img-responsive" alt="" style="width: 100%"/>
+<img src="{{url('banner/banner1.jpg')}}" class="am-img-responsive" alt=""/>
 <table class="am-table">
     <tr>
         <td><a href="/money">我要赚钱</a></td>
@@ -40,31 +46,45 @@
         <td><a href="/tixian">立即提现</a></td>
     </tr>
 </table>
-<div class="am-g">
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/geren.png')}}"><div>个人中心</div></div></a>
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/denglu.png')}}"><div>登录密码</div></div></a>
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/xinxi.png')}}"><div>信息中心</div></div></a>
+<div class="am-g am-g-fixed">
+    <div class="am-u-sm-12">当前总投注量(元)</div>
+    <div class="am-u-sm-12">0</div>
+    <br>
+    <div class="am-u-sm-12">可提款金额</div>
+    <div class="am-u-sm-12"><span style="color: red">(可提款金额=金币-赠送)</span></div>
 </div>
-<div class="am-g">
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/jinbi.png')}}"><div>金币管理</div></div></a>
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/qukuan.png')}}"><div>取款密码</div></div></a>
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/yinhangka.png')}}"><div>银行账号</div></div></a>
+<br>
+<div class="am-input-group am-input-group-success">
+    <span class="am-input-group-label">卡号</span>
+    <input type="text" class="am-form-field" disabled="disabled" placeholder="" >
 </div>
-<div class="am-g">
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/jilu.png')}}"><div>推广记录</div></div></a>
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/kefu.png')}}"><div>在线客服</div></div></a>
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/tuichu.png')}}"><div>退出登录</div></div></a>
+<br>
+<div class="am-input-group am-input-group-secondary">
+    <span class="am-input-group-label">金额</span>
+    <input type="text" class="am-form-field">
 </div>
+<br>
+<div class="am-input-group am-input-group-warning">
+    <span class="am-input-group-label">密码</span>
+    <input type="text" class="am-form-field">
+</div>
+<div class="am-g am-g-fixed">
+    <div class="am-u-sm-12">取款上限为<span style="color: red">50000</span>,下限为<span style="color: red">100</span></div>
+</div>
+<div class="am-g am-g-fixed">
+    <button type="button" class="am-btn am-btn-secondary am-btn-block am-round">确认取款</button>
+</div>
+
 <div class="am-navbar am-navbar-default" data-am-widget="navbar">
     <ul class="am-navbar-nav am-cf am-avg-sm-3"><!--导航条是否隐藏多余项的关键参数-->
         <li>
-            <a href="#">
+            <a href="/">
                 <span class="am-icon-home"></span>
                 <span class="am-navbar-label">首页</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/user">
                 <span class="am-icon-user-md"></span>
                 <span class="am-navbar-label">个人</span>
             </a>
@@ -89,15 +109,15 @@
         </li>
     </ul>
 </div>
-    <!--[if lt IE 9]>
-    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-    <script src="{{url('js/amazeui.ie8polyfill.min.js')}}"></script>
-    <![endif]-->
-    <!--[if (gte IE 9)|!(IE)]><!-->
-    <script src="{{url('js/jquery.min.js')}}"></script>
-    <!--<![endif]-->
-    <script src="{{url('js/amazeui.min.js')}}"></script>
-    <script src="{{url('js/app.js')}}"></script>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="{{url('js/amazeui.ie8polyfill.min.js')}}"></script>
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="{{url('js/jquery.min.js')}}"></script>
+<!--<![endif]-->
+<script src="{{url('js/amazeui.min.js')}}"></script>
+<script src="{{url('js/app.js')}}"></script>
 </body>
 </html>

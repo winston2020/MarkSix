@@ -38,6 +38,18 @@
                 {{--<input type="button" id="login" name="" value="注 册" class="am-btn am-btn-primary am-btn-sm am-fl">--}}
             {{--</div>--}}
         {{--</form>--}}
+        <header data-am-widget="header"
+                class="am-header am-header-default">
+            <div class="am-header-left am-header-nav">
+                @if(\Illuminate\Support\Facades\Auth::check())
+                    <i class="am-header-icon am-icon-home"></i>
+                @else
+                    <a href="/regist" class="">
+                        &rightleftharpoons; <a href="/" style="font-size: 0.8rem">返回</a>
+                    </a>
+                @endif
+            </div>
+        </header>
         <div class="login-container">
             <h1>9527欢迎您</h1>
             <div class="connect">
@@ -62,7 +74,7 @@
                 </div>
                 <button id="login" type="submit">注 册</button>
             </form>
-            <a href="#">
+            <a href="login">
                 <button type="button" class="register-tis">已有账号,点击登录</button>
             </a>
         </div>

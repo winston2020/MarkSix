@@ -10,4 +10,5 @@ class ActiveController extends Controller
     {
         return view('active.index');
     }
+
 }

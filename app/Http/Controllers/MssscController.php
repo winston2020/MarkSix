@@ -12,7 +12,7 @@ class MssscController extends Controller
         return view('reward.msssc.index');
     }
 
-    public function createinstallments(Request $request)
+    public function createinstallments(Request $request) //生成数字发送前端并保存至数据库
     {
          $day = date('Y-m-d');
          $msssc = Msssc::where('created_at','like','%'.$day.'%')->orderby('id','desc')->first();
@@ -43,4 +43,20 @@ class MssscController extends Controller
              return response()->json(['status'=>500,'data'=>'错误']);
          }
     }
+
+    public function receivejudgements(Request $request){ //接收下注，进行下注判断，并把下注结果存入数据库
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
 }
