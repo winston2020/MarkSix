@@ -9,7 +9,9 @@ class MssscController extends Controller
 {
     public function index()
     {
-        return view('reward.msssc.index');
+        $msssc = Msssc::where([])->orderby('id','desc')->limit(2)->get();
+
+        return view('reward.msssc.index',compact('msssc'));
     }
 
     public function createinstallments(Request $request) //生成数字发送前端并保存至数据库
@@ -17,7 +19,7 @@ class MssscController extends Controller
          $day = date('Y-m-d');
          $msssc = Msssc::where('created_at','like','%'.$day.'%')->orderby('id','desc')->first();
          $day = date('Ymd');
-         dd($day);
+
          if (empty($msssc)){
              $number = 1;
              $installment = $day.$number;
