@@ -16,7 +16,11 @@
     <link rel="stylesheet" href="{{url('css/admin.css')}}">
     <link rel="stylesheet" href="{{url('css/style.css')}}">
     <script src="{{url('js/jquery.min.js')}}"></script>
-
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="{{url('js/amazeui.ie8polyfill.min.js')}}"></script>
+    <script src="{{url('js/amazeui.min.js')}}"></script>
+    <script src="{{url('js/app.js')}}"></script>
 </head>
 <body>
 <header data-am-widget="header"
@@ -25,7 +29,7 @@
         @if(\Illuminate\Support\Facades\Auth::check())
             <i class="am-header-icon am-icon-home"></i>
         @else
-            <a href="/regist" class="">
+            <a href="/" class="">
                 &rightleftharpoons; <a href="/" style="font-size: 0.8rem">返回</a>
             </a>
         @endif
@@ -124,15 +128,6 @@
     {{--</ul>--}}
 {{--</div>--}}
 
-<!--[if lt IE 9]>
-<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="{{url('js/amazeui.ie8polyfill.min.js')}}"></script>
-<![endif]-->
 
-<!--[if (gte IE 9)|!(IE)]><!-->
-<!--<![endif]-->
-<script src="{{url('js/amazeui.min.js')}}"></script>
-<script src="{{url('js/app.js')}}"></script>
 </body>
 </html>

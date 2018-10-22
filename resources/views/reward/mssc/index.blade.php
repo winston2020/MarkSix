@@ -2,94 +2,84 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="{{url('css/msssc.css')}}">
     <link rel="stylesheet" href="{{url('css/amazeui.min.css')}}"/>
+    <title>秒速时时彩</title>
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="{{url('js/amazeui.ie8polyfill.min.js')}}"></script>
+    <script src="{{url('js/amazeui.min.js')}}"></script>
+    <script src="{{url('js/app.js')}}"></script>
+    <script src="{{url('js/jquery.min.js')}}"></script>
+    <style>
+        .selected {
+            background: red;
+            color: palegoldenrod;
+        }
 
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-    <title>8848娱乐视频</title>
+        .am-nav-tabs > li {
+            margin-left: -7px;
+        }
+    </style>
 </head>
 <body>
 <div id="app">
     <div class="page-tabbar">
 
+
         <header data-am-widget="header"
                 class="am-header am-header-default">
             <div class="am-header-left am-header-nav">
-                <span style="font-size: 15px">首页</span>
+                <a href="/"><span style="font-size: 15px">首页</span></a>
             </div>
 
             <h1 class="am-header-title">
                 <a href="#" class="">
-                    <span style="font-size: 17px">秒速赛车(PK10)</span>
+                    <span style="font-size: 17px">秒速时时彩</span>
                 </a>
             </h1>
 
             <div class="am-header-right am-header-nav">
-                    {{--{{\Illuminate\Support\Facades\Auth::user()->price}}金币--}}
+                {{--{{\Illuminate\Support\Facades\Auth::user()->price}}金币--}}
                 <span style="font-size: 15px">0.00金币</span>
             </div>
         </header>
 
 
-
         <div style="border: 1px solid rgb(214, 214, 214); margin-top: 5px; margin-bottom: 5px; font-size: 14px;">
-            <table style="width: 100%; padding: 10px 0px;">
+            <table style="width: 100%; padding: 10px;">
                 <tr>
-                    <td height="40px" align="left" style="width: 30%; font-size: 12px;"><a>20180911410期</a></td>
-                    <td align="right" style="width: 70%;">
+                    <td height="40px" align="left" style="width: 35%;"><a>20180911401期</a></td>
+                    <td align="right" style="width: 65%;">
                         <div style="width: 100%;">
                             <ul style="padding: 0px; margin: 0px;">
-                                <li style="float: left; width: 10%; list-style-type: none;">
+                                <li style="float: left; width: 25%; list-style-type: none; text-align: -webkit-center; line-height: 20px;">
                                     <div class="arrow"></div>
                                 </li>
-                                <li style="float: left; width: 9%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 2px; margin: 1px;">
-                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">2</span>
-                                    </div>
-                                </li>
-                                <li style="float: left; width: 9%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 2px; margin: 1px;">
-                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">9</span>
-                                    </div>
-                                </li>
-                                <li style="float: left; width: 9%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 2px; margin: 1px;">
-                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">7</span>
-                                    </div>
-                                </li>
-                                <li style="float: left; width: 9%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 2px; margin: 1px;">
-                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">1</span>
-                                    </div>
-                                </li>
-                                <li style="float: left; width: 9%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 2px; margin: 1px;">
+                                <li style="float: left; width: 15%; list-style-type: none;">
+                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 10px; margin: 1px;">
                                         <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">4</span>
                                     </div>
                                 </li>
-                                <li style="float: left; width: 9%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 2px; margin: 1px;">
-                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">8</span>
+                                <li style="float: left; width: 15%; list-style-type: none;">
+                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 10px; margin: 1px;">
+                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">1</span>
                                     </div>
                                 </li>
-                                <li style="float: left; width: 9%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 2px; margin: 1px;">
+                                <li style="float: left; width: 15%; list-style-type: none;">
+                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 10px; margin: 1px;">
                                         <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">5</span>
                                     </div>
                                 </li>
-                                <li style="float: left; width: 9%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 2px; margin: 1px;">
+                                <li style="float: left; width: 15%; list-style-type: none;">
+                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 10px; margin: 1px;">
+                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">4</span>
+                                    </div>
+                                </li>
+                                <li style="float: left; width: 15%; list-style-type: none;">
+                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 10px; margin: 1px;">
                                         <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">6</span>
-                                    </div>
-                                </li>
-                                <li style="float: left; width: 9%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 2px; margin: 1px;">
-                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">10</span>
-                                    </div>
-                                </li>
-                                <li style="float: left; width: 9%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 2px; margin: 1px;">
-                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">3</span>
                                     </div>
                                 </li>
                             </ul>
@@ -97,25 +87,22 @@
                     </td>
                 </tr>
                 <tr>
-                    <td height="40px" align="left" style="width: 30%; font-size: 12px;">20180911411期</td>
-                    <td align="right" style="width: 70%;"><font color="red">封盘: 00:00 &nbsp;&nbsp;&nbsp;&nbsp;开奖:
-                            00:04</font><!----></td>
+                    <td height="40px" align="left" style="width: 35%;">20180911402期</td>
+                    <td align="right" style="width: 70%;"><!----><font>封盘: 00:29 &nbsp;&nbsp;&nbsp;&nbsp;开奖:
+                            00:44</font></td>
                 </tr>
             </table>
         </div>
-        <div class="page-wrap">
-            <div class="mint-navbar page-navbar"><a class="mint-tab-item is-selected">
-                    <div class="mint-tab-item-icon"></div>
-                    <div class="mint-tab-item-label">两面</div>
-                </a> <a class="mint-tab-item">
-                    <div class="mint-tab-item-icon"></div>
-                    <div class="mint-tab-item-label">1-5名</div>
-                </a> <a class="mint-tab-item">
-                    <div class="mint-tab-item-icon"></div>
-                    <div class="mint-tab-item-label">6-10名</div>
-                </a></div>
-            <div class="mint-tab-container page-tabbar-container" style="padding-bottom: 230px;">
-                <div class="mint-tab-container-wrap">
+        <div class="am-tabs" data-am-tabs>
+            <ul class="am-tabs-nav am-nav am-nav-tabs">
+                <li class="am-active"><a href="#tab1">两面</a></li>&nbsp;&nbsp;&nbsp;
+                <li><a href="#tab2">冠亚和</a></li>
+                <li><a href="#tab3">1~5名</a></li>
+                <li><a href="#tab4">6~10名</a></li>
+            </ul>
+
+            <div class="am-tabs-bd" style=" overflow-y:auto;">
+                <div class="am-tab-panel am-fade am-in am-active" id="tab1" style="height: 600px">
                     <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214);">
                         <ul style="padding: 5px;">
                             <li class="container-li3"><p
@@ -403,7 +390,9 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="mint-tab-container-item" style="display: none; border: 1px solid rgb(214, 214, 214);">
+                </div>
+                <div class="am-tab-panel am-fade" id="tab2" style="height: 600px">
+                    <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214); ">
                         <ul style="padding: 5px;">
                             <li class="container-li3"><p style="text-align: center; font-size: 14px;">冠、亚军组合</p></li>
                             <li class="container-li2">
@@ -513,7 +502,9 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="mint-tab-container-item" style="display: none; border: 1px solid rgb(214, 214, 214);">
+                </div>
+                <div class="am-tab-panel am-fade" id="tab3" style="height: 600px">
+                    <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214); ">
                         <ul style="padding: 5px;">
                             <li class="container-li3"><p style="text-align: center; font-size: 14px;">冠军</p></li>
                             <li class="container-li2">
@@ -772,7 +763,9 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="mint-tab-container-item" style="display: none; border: 1px solid rgb(214, 214, 214);">
+                </div>
+                <div class="am-tab-panel am-fade" id="tab4" style="height: 600px">
+                    <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214); ">
                         <ul style="padding: 5px;">
                             <li class="container-li3"><p style="text-align: center; font-size: 14px;">第六名</p></li>
                             <li class="container-li2">
@@ -1034,10 +1027,10 @@
                 </div>
             </div>
         </div>
-        <div class="bottom-bar">
+        <div class="bottom-bar" style="z-index: 999">
             <ul style="padding: 0px; margin: 0px;">
                 <li style="float: left; margin-left: 3px; margin-top: 3px; margin-bottom: 5px; list-style-type: none;">
-                    <span style="line-height: 48px; color: red;">已选择 0 注</span></li>
+                    <span style="line-height: 48px; color: red;">已选择 <span id="number"></span> 注</span></li>
                 <li style="float: left; margin-bottom: 5px; margin-top: 3px; list-style-type: none;">
                     <div style="height: 48px; width: 100%; margin: 0px 0px 0px 3px; padding: 0px;"><a
                                 class="mint-cell mint-field is-nolabel"
@@ -1057,18 +1050,39 @@
                             <div class="mint-cell-right"></div> <!----></a></div>
                 </li>
                 <li style="float: right; margin-right: 3px; margin-top: 9px; list-style-type: none;">
-                    <button class="mint-button mint-button--danger mint-button--normal"><!----> <label
+                    <button class="mint-button mint-button--danger mint-button--normal" id="restart"><!----> <label
                                 class="mint-button-text">重置</label></button>
                 </li>
-                <li style="float: right; margin-right: 3px; margin-top: 9px; list-style-type: none;"><!---->
-                    <button class="mint-button mint-button--primary mint-button--normal is-disabled"
-                            disabled="disabled"><!----> <label class="mint-button-text">封盘</label></button>
-                </li>
+                <li style="float: right; margin-right: 3px; margin-top: 9px; list-style-type: none;">
+                    <button class="mint-button mint-button--primary mint-button--normal"><!----> <label
+                                class="mint-button-text">下注</label></button><!----></li>
             </ul>
         </div>
     </div>
 </div>
-{{--<script src="./8848娱乐视频_files/build.js"></script>--}}
+<script>
+    $(".mint-tab-container-item>ul>li>button").click(function () {
+        $(this).toggleClass("selected");
+    })
+</script>
+<script>
+    ppp = function () {
+        var idnumber = $('.selected');
+        $("#number").text(idnumber.length)
+    }
+    var t2 = window.setInterval("ppp()", 200);
+</script>
+<div class="mint-msgbox-wrapper" style="position: absolute; z-index: 2005;">
+    <div class="mint-msgbox" style="display: none;">
+        <div class="mint-msgbox-header">
+            <div class="mint-msgbox-title">投注失败，余额不足！</div>
+        </div> <!---->
+        <div class="mint-msgbox-btns">
+            <button class="mint-msgbox-btn mint-msgbox-cancel " style="display: none;">取消</button>
+            <button class="mint-msgbox-btn mint-msgbox-confirm ">确定</button>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

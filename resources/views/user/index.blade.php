@@ -14,6 +14,11 @@
     <meta name="apple-mobile-web-app-title" content="秒速时时彩" />
     <link rel="stylesheet" href="{{url('css/amazeui.min.css')}}"/>
     <link rel="stylesheet" href="{{url('css/admin.css')}}">
+    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="{{url('js/jquery.min.js')}}"></script>
+    <script src="{{url('js/amazeui.js')}}"></script>
+    <script src="{{url('js/app.js')}}"></script>
     <style>
         .am-g{
             text-align: center;
@@ -41,19 +46,19 @@
     </tr>
 </table>
 <div class="am-g">
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/geren.png')}}"><div>个人中心</div></div></a>
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/denglu.png')}}"><div>登录密码</div></div></a>
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/xinxi.png')}}"><div>信息中心</div></div></a>
+    <a href="/user/information"><div class="am-u-sm-4"><img src="{{url('images/geren.png')}}"><div>个人中心</div></div></a>
+    <a href="/user/password"><div class="am-u-sm-4"><img src="{{url('images/denglu.png')}}"><div>登录密码</div></div></a>
+    <a href="/user/message"><div class="am-u-sm-4"><img src="{{url('images/xinxi.png')}}"><div>信息中心</div></div></a>
 </div>
 <div class="am-g">
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/jinbi.png')}}"><div>金币管理</div></div></a>
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/qukuan.png')}}"><div>取款密码</div></div></a>
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/yinhangka.png')}}"><div>银行账号</div></div></a>
+    <a href="/user/gold"><div class="am-u-sm-4"><img src="{{url('images/jinbi.png')}}"><div>金币管理</div></div></a>
+    <a href="/user/withdraw"><div class="am-u-sm-4"><img src="{{url('images/qukuan.png')}}"><div>取款密码</div></div></a>
+    <a href="/user/bank"><div class="am-u-sm-4"><img src="{{url('images/yinhangka.png')}}"><div>银行账号</div></div></a>
 </div>
 <div class="am-g">
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/jilu.png')}}"><div>推广记录</div></div></a>
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/kefu.png')}}"><div>在线客服</div></div></a>
-    <a href="#"><div class="am-u-sm-4"><img src="{{url('images/tuichu.png')}}"><div>退出登录</div></div></a>
+    <a href="/user/extension"><div class="am-u-sm-4"><img src="{{url('images/jilu.png')}}"><div>推广记录</div></div></a>
+    <a href="/user/service"><div class="am-u-sm-4"><img src="{{url('images/kefu.png')}}"><div>在线客服</div></div></a>
+    <a href="#" ><div class="am-u-sm-4"><img src="{{url('images/tuichu.png')}}"><div>退出登录</div></div></a>
 </div>
 <div class="am-navbar am-navbar-default" data-am-widget="navbar">
     <ul class="am-navbar-nav am-cf am-avg-sm-3"><!--导航条是否隐藏多余项的关键参数-->
@@ -89,15 +94,6 @@
         </li>
     </ul>
 </div>
-    <!--[if lt IE 9]>
-    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-    <script src="{{url('js/amazeui.ie8polyfill.min.js')}}"></script>
-    <![endif]-->
-    <!--[if (gte IE 9)|!(IE)]><!-->
-    <script src="{{url('js/jquery.min.js')}}"></script>
-    <!--<![endif]-->
-    <script src="{{url('js/amazeui.min.js')}}"></script>
-    <script src="{{url('js/app.js')}}"></script>
+
 </body>
 </html>

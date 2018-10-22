@@ -15,8 +15,11 @@
     <style>
         .selected{
             background: red;
+            color: palegoldenrod;
         }
-
+        .am-nav-tabs>li{
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +30,7 @@
         <header data-am-widget="header"
                 class="am-header am-header-default">
             <div class="am-header-left am-header-nav">
-                <span style="font-size: 15px">首页</span>
+                <a href="/"><span style="font-size: 15px">首页</span></a>
             </div>
 
             <h1 class="am-header-title">
@@ -92,7 +95,7 @@
         </div>
         <div class="am-tabs" data-am-tabs >
             <ul class="am-tabs-nav am-nav am-nav-tabs">
-                <li class="am-active"><a href="#tab1">两面</a></li>
+                <li class="am-active"><a href="#tab1">两面</a></li>&nbsp;&nbsp;&nbsp;
                 <li><a href="#tab2">1-5球</a></li>
                 <li><a href="#tab3">前中后</a></li>
             </ul>
@@ -247,7 +250,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="am-tab-panel am-fade" id="tab2" >
+                <div class="am-tab-panel am-fade" id="tab2" style="height: 600px" >
                     <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214); " >
                         <ul style="padding: 5px;" >
                             <li class="container-li3"><p style="text-align: center; font-size: 14px;">第一球</p></li>

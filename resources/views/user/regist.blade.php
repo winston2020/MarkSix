@@ -44,7 +44,7 @@
                 @if(\Illuminate\Support\Facades\Auth::check())
                     <i class="am-header-icon am-icon-home"></i>
                 @else
-                    <a href="/regist" class="">
+                    <a href="/" class="">
                         &rightleftharpoons; <a href="/" style="font-size: 0.8rem">返回</a>
                     </a>
                 @endif
