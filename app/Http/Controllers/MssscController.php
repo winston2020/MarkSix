@@ -9,14 +9,17 @@ class MssscController extends Controller
 {
     public function index()
     {
-        return view('reward.msssc.index');
+        $msssc = Msssc::where([])->orderby('id','desc')->limit(2)->get();
+
+        return view('reward.msssc.index',compact('msssc'));
     }
 
-    public function createinstallments(Request $request)
+    public function createinstallments(Request $request) //生成数字发送前端并保存至数据库
     {
          $day = date('Y-m-d');
          $msssc = Msssc::where('created_at','like','%'.$day.'%')->orderby('id','desc')->first();
          $day = date('Ymd');
+
          if (empty($msssc)){
              $number = 1;
              $installment = $day.$number;
@@ -42,4 +45,20 @@ class MssscController extends Controller
              return response()->json(['status'=>500,'data'=>'错误']);
          }
     }
+
+    public function receivejudgements(Request $request){ //接收下注，进行下注判断，并把下注结果存入数据库
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
 }

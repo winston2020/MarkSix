@@ -38,6 +38,7 @@ Route::group(['middleware'=>['web']],function(){
     Route::get('user/addbank','UserController@addbank');
     Route::get('video/id/{id}','VideoController@show');
     Route::get('video/{tag}','VideoController@videolist');
+    Route::get('reward','RewardController@index');
 
     Route::post('reward/msssc/add','MssscController@createinstallments');
 

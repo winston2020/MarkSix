@@ -5,23 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="{{url('css/msssc.css')}}">
     <link rel="stylesheet" href="{{url('css/amazeui.min.css')}}"/>
-    <title>秒速时时彩</title>
-    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-    <script src="{{url('js/amazeui.ie8polyfill.min.js')}}"></script>
-    <script src="{{url('js/amazeui.min.js')}}"></script>
-    <script src="{{url('js/app.js')}}"></script>
-    <script src="{{url('js/jquery.min.js')}}"></script>
-    <style>
-        .selected {
-            background: red;
-            color: palegoldenrod;
-        }
 
-        .am-nav-tabs > li {
-            margin-left: -7px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>8848娱乐视频</title>
 </head>
 <body>
 <div id="app">
@@ -31,7 +17,8 @@
         <header data-am-widget="header"
                 class="am-header am-header-default">
             <div class="am-header-left am-header-nav">
-                <a href="/"><span style="font-size: 15px">首页</span></a>
+
+                <span style="font-size: 15px"><a href="{{url('')}}">首页</a></span>
             </div>
 
             <h1 class="am-header-title">

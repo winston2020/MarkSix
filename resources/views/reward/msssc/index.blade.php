@@ -3,11 +3,12 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="_token" content="{{ csrf_token() }}"/>
     <link rel="stylesheet" href="{{url('css/msssc.css')}}">
     <link rel="stylesheet" href="{{url('css/amazeui.min.css')}}"/>
+    <script src="{{url('js/jquery.min.js')}}"></script>
     <title>秒速时时彩</title>
-    <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+    <script src="{{url('js/jquery.min.js')}}"></script>
     <script src="{{url('js/amazeui.ie8polyfill.min.js')}}"></script>
     <script src="{{url('js/amazeui.min.js')}}"></script>
     <script src="{{url('js/app.js')}}"></script>
@@ -20,18 +21,24 @@
         .am-nav-tabs>li{
             margin-left: 20px;
         }
+        .yc{
+            display: none;
+        }
     </style>
 </head>
 <body>
 <div id="app">
     <div class="page-tabbar">
-
-
         <header data-am-widget="header"
                 class="am-header am-header-default">
             <div class="am-header-left am-header-nav">
-                <a href="/"><span style="font-size: 15px">首页</span></a>
+                <span style="font-size: 15px" id="gohome">首页</span>
             </div>
+            <script>
+                $('#gohome').click(function(){
+                    window.location.href ='{{url('')}}';
+                });
+            </script>
 
             <h1 class="am-header-title">
                 <a href="#" class="">
@@ -44,53 +51,80 @@
                 <span style="font-size: 15px">0.00金币</span>
             </div>
         </header>
-
-
-
         <div style="border: 1px solid rgb(214, 214, 214); margin-top: 5px; margin-bottom: 5px; font-size: 14px;">
             <table style="width: 100%; padding: 10px;">
                 <tr>
-                    <td height="40px" align="left" style="width: 35%;"><a>20180911401期</a></td>
+                    <td height="40px" align="left" style="width: 35%;"><a id="beforInstallments">{{$msssc[1]->installment}}期 </a></td>
                     <td align="right" style="width: 65%;">
                         <div style="width: 100%;">
                             <ul style="padding: 0px; margin: 0px;">
                                 <li style="float: left; width: 25%; list-style-type: none; text-align: -webkit-center; line-height: 20px;">
                                     <div class="arrow"></div>
                                 </li>
+                                @foreach(str_split($msssc[0]->reward) as $item)
                                 <li style="float: left; width: 15%; list-style-type: none;">
                                     <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 10px; margin: 1px;">
-                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">4</span>
+                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">{{$item}}</span>
                                     </div>
                                 </li>
-                                <li style="float: left; width: 15%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 10px; margin: 1px;">
-                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">1</span>
-                                    </div>
-                                </li>
-                                <li style="float: left; width: 15%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 10px; margin: 1px;">
-                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">5</span>
-                                    </div>
-                                </li>
-                                <li style="float: left; width: 15%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 10px; margin: 1px;">
-                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">4</span>
-                                    </div>
-                                </li>
-                                <li style="float: left; width: 15%; list-style-type: none;">
-                                    <div style="width: 20px; height: 20px; background-color: rgb(255, 0, 0); border-radius: 10px; margin: 1px;">
-                                        <span style="height: 20px; line-height: 20px; display: block; color: rgb(255, 255, 255); text-align: center;">6</span>
-                                    </div>
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td height="40px" align="left" style="width: 35%;">20180911402期</td>
-                    <td align="right" style="width: 70%;"><!----><font>封盘: 00:29 &nbsp;&nbsp;&nbsp;&nbsp;开奖:
-                            00:44</font></td>
+                    <td height="40px" align="left" style="width: 35%;" id="nowinstallment" >{{$msssc[0]->installment}}期</td>
+                    <td align="right" style="width: 70%;">
+                        <!----><font>封盘: <span id="prezero">0</span><span id="m"></span>:<span id="s"></span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;开奖:<span id="kjprezeor">0</span><span id="kjm"></span>:<span id="kjs"></span>
+                        </font>
+                    </td>
                 </tr>
+                <script>
+                    var s = 5;    //设置秒
+                    var kjs = 10;    //设置开奖秒
+
+                    function showtime(){
+
+                        document.getElementById('s').innerHTML = s;
+                        s = s-1;
+
+                        console.log('封盘:'+s)
+                        if(s==0){   //当时间为0分1秒时，暂停
+                            $('#prezero').attr("style",'color:red')
+                            $('#kjprezeor').attr("style",'color:red')
+                            $('#s').attr("style",'color:red')
+                            $('#kjs').attr("style",'color:red')
+                            $(".bottom-bar").toggleClass("yc");
+                            setTimeout(function(){ s=60 }, 16000);
+                        }
+                    }
+                    var settime = setInterval(function(){
+                        showtime();
+                    },1000);
+
+
+                    function kjtime(){
+                        document.getElementById('kjs').innerHTML = kjs;
+                        console.log('开奖:'+kjs)
+
+                        kjs = kjs-1;
+                        if(kjs<0){   //当时间为0分0秒时，暂停
+                            kjm = 0;  //设置分
+                            kjs = 75; //设置秒
+                            $('#prezero').attr("style",'color:black')
+                            $('#kjprezeor').attr("style",'color:black')
+                            $('#s').attr("style",'color:black')
+                            $('#kjs').attr("style",'color:black')
+                            $(".bottom-bar").toggleClass("yc");
+                        }
+                    }
+
+                    var settime1 = setInterval(function(){
+                        kjtime();
+                    },1000);
+
+                </script>
             </table>
         </div>
         <div class="am-tabs" data-am-tabs >
@@ -654,5 +688,34 @@
     </div>
 </div>
 
+<script>
+    $(function(){
+        setInterval(aa,90000);
+        function aa(){
+            $.ajaxSetup({
+                headers: { 'X-CSRF-TOKEN' : '{{ csrf_token() }}' }
+            });
+            $.ajax({
+                type:"POST",
+                url:"/reward/msssc/add",
+                data:{},
+                datatype: "json",//"xml", "html", "script", "json", "jsonp", "text".
+                beforeSend:function(){
+                    $("#msg").html("logining");
+                },
+                success:function(data){
+
+                },
+                complete: function(XMLHttpRequest, textStatus){
+//                    alert(XMLHttpRequest.responseText);
+//                    alert(textStatus);
+                },
+                error: function(){
+
+                }
+            });
+        }
+    })
+</script>
 </body>
 </html>
