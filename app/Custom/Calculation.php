@@ -20,7 +20,7 @@
 $this->sum = sum();
 
 function sum(){
-    $num = 123456;
+    $num =
     if (is_int($num)){
         $nums = str_split($num);
         $shuzi=0;
@@ -606,22 +606,3 @@ function HouZaLiu(){
     return true;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

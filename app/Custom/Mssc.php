@@ -12,9 +12,7 @@
  */
 
 
-function Champion(){
-    $num = ''
-}
+
 
 
 

@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Msssc;
+use App\MssscResult;
+use App\Result;
 use Illuminate\Http\Request;
 
 class MssscController extends Controller
 {
     public function index()
     {
+        $result =  MssscResult::all();
+        dd($result);
         $msssc = Msssc::where([])->orderby('id','desc')->limit(2)->get();
-
         return view('reward.msssc.index',compact('msssc'));
     }
 
@@ -32,7 +35,6 @@ class MssscController extends Controller
          for($i=0;$i<strlen($reward);$i++){
              $rewarddata[] = substr($reward,$i,1);
          }
-
          $msssc = new  Msssc();
          $msssc->installment = $installment;
          $msssc->reward = $reward;
@@ -46,18 +48,26 @@ class MssscController extends Controller
          }
     }
 
-    public function receivejudgements(Request $request){ //接收下注，进行下注判断，并把下注结果存入数据库
-
-
+    public function result()
+    {
+       $lastresult =  Msssc::where([])->orderby('created_at','desc')->first();
+       $current_data =  Result::where(['installment_id'=>$lastresult->id])->get();
 
     }
 
-
-
-
-
-
-
+    public function create_msssc_result()
+    {
+        for ($i=0;$i<27;$i++){
+            $res = new MssscResult();
+            $res->big_category = '两面';
+            $res->small_category = '1-5球';
+            $res->result = '1-5球';
+            $res->odds = 1.99;
+            $res->created_at = '2018-10-23 12:03:43';
+            $res->updated_at = '2018-10-23 12:03:43';
+            $res->save();
+        }
+    }
 
 
 

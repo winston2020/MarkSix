@@ -19,8 +19,6 @@ Route::get('tixian','UserController@tixian');
 Route::get('geren','UserController@geren');
 Route::get('money','MoneyController@index');
 Route::get('user','UserController@index');
-Route::get('reward;','RewardController@index');
-Route::get('reward/msssc','RewardController@index');
 
 
 Route::group(['middleware'=>['web']],function(){
@@ -30,10 +28,13 @@ Route::group(['middleware'=>['web']],function(){
     Route::get('video/id/{id}','VideoController@show');
     Route::get('video/{tag}','VideoController@videolist');
     Route::get('reward','RewardController@index');
+    Route::get('reward/msssc','RewardController@msssc');
+    Route::get('reward/mssc','RewardController@mssc');
 
     Route::post('reward/msssc/add','MssscController@createinstallments');
 
     Route::get('msssc','MssscController@index');
     Route::get('mssc','MsscController@index');
+    Route::get('create_msssc_result','MssscController@create_msssc_result');
 
 });

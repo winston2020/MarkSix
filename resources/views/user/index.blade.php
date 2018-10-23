@@ -55,36 +55,33 @@
     <a href="#"><div class="am-u-sm-4"><img src="{{url('images/kefu.png')}}"><div>在线客服</div></div></a>
     <a href="#"><div class="am-u-sm-4"><img src="{{url('images/tuichu.png')}}"><div>退出登录</div></div></a>
 </div>
+
+
+
 <div class="am-navbar am-navbar-default" data-am-widget="navbar">
     <ul class="am-navbar-nav am-cf am-avg-sm-3"><!--导航条是否隐藏多余项的关键参数-->
         <li>
-            <a href="#">
+            <a href="/">
                 <span class="am-icon-home"></span>
-                <span class="am-navbar-label">首页</span>
+                <span class="am-navbar-label">活动</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/reward">
                 <span class="am-icon-user-md"></span>
-                <span class="am-navbar-label">个人</span>
+                <span class="am-navbar-label">开奖</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/money">
                 <span class="am-icon-star"></span>
-                <span class="am-navbar-label">收藏</span>
+                <span class="am-navbar-label">赚钱</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="/user">
                 <span class="am-icon-share-square-o"></span>
-                <span class="am-navbar-label">分享</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <span class="am-icon-comments-o"></span>
-                <span class="am-navbar-label">聊天</span>
+                <span class="am-navbar-label">会员</span>
             </a>
         </li>
     </ul>

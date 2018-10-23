@@ -95,7 +95,6 @@
                             $('#kjs').attr("style",'color:red')
                             clearInterval(settime);
                         }
-                        alert(s)
                         if(s<0){
                             alert('12')
                             m = 0
@@ -151,7 +150,7 @@
                             <li class="container-li3"><p
                                         style="text-align: center; line-height: 30px; vertical-align: top; font-size: 14px;">
                                     总和、龙虎</p></li>
-                            <li class="container-li2">
+                            <li class   ="container-li2">
                                 <button class="mint-button mint-button--default mint-button--large" id="105001001">
                                     <!----> <label class="mint-button-text">总和大 <span
                                                 style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
