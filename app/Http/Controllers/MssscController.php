@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Msssc;
+use App\MssscBigCategory;
 use App\MssscResult;
+use App\MssscSmallCategory;
 use App\Result;
 use Illuminate\Http\Request;
 
@@ -11,10 +13,19 @@ class MssscController extends Controller
 {
     public function index()
     {
-        $result =  MssscResult::all();
-        dd($result);
+        $big =  MssscBigCategory::all()->toArray();
+        foreach ($big as $key=>$item){
+            $big[$key]['small'] = MssscSmallCategory::where(['category_id'=>$item['id']])->get()->toArray();
+        }
+
+        foreach ($big as $key=>$item){
+            foreach ($item['small'] as $key1=>$value){
+                $big[$key]['small'][$key1]['result'] = MssscResult::where(['small_category'=>$value['id']])->get()->toArray();
+            }
+        }
+
         $msssc = Msssc::where([])->orderby('id','desc')->limit(2)->get();
-        return view('reward.msssc.index',compact('msssc'));
+        return view('reward.msssc.index',compact('msssc','caterote','big'));
     }
 
     public function createinstallments(Request $request) //生成数字发送前端并保存至数据库

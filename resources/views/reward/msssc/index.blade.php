@@ -99,15 +99,6 @@
                             $('#kjs').attr("style",'color:red')
                             $(".bottom-bar").addClass("yc");
                         }
-<<<<<<< HEAD
-                        if(s<0){
-                            alert('12')
-                            m = 0
-                            s = 0
-                        }
-
-=======
->>>>>>> 2637b88b278da4ad0a8ebc57b12d50eeec2e49c6
                     }
 
 
@@ -146,499 +137,107 @@
                 <div class="am-tab-panel am-fade am-in am-active" id="tab1">
                     <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214);">
                         <ul style="padding: 5px;">
+                            @foreach($big[0]['small'] as $item)
                             <li class="container-li3"><p
                                         style="text-align: center; line-height: 30px; vertical-align: top; font-size: 14px;">
-                                    总和、龙虎</p></li>
-                            <li class   ="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001001">
-                                    <!----> <label class="mint-button-text">总和大 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001002">
-                                    <!----> <label class="mint-button-text">总和小 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001003">
-                                    <!----> <label class="mint-button-text">总和单 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001004">
-                                    <!----> <label class="mint-button-text">总和双 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li1">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001005">
-                                    <!----> <label class="mint-button-text">龙 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li1">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001006">
-                                    <!----> <label class="mint-button-text">虎 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li1">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001007">
-                                    <!----> <label class="mint-button-text">和 <span
-                                                style="font-size: 10px; font-weight: bold;">9</span></label></button>
-                            </li>
-                            <li class="container-li3"><p style="text-align: center; font-size: 14px;">第一球</p></li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001008">
-                                    <!----> <label class="mint-button-text">大 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001009">
-                                    <!----> <label class="mint-button-text">小 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001010">
-                                    <!----> <label class="mint-button-text">单 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001011">
-                                    <!----> <label class="mint-button-text">双 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li3"><p style="text-align: center; font-size: 14px;">第二球</p></li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001012">
-                                    <!----> <label class="mint-button-text">大 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001013">
-                                    <!----> <label class="mint-button-text">小 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001014">
-                                    <!----> <label class="mint-button-text">单 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001015">
-                                    <!----> <label class="mint-button-text">双 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li3"><p style="text-align: center; font-size: 14px;">第三球</p></li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001016">
-                                    <!----> <label class="mint-button-text">大 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001017">
-                                    <!----> <label class="mint-button-text">小 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001018">
-                                    <!----> <label class="mint-button-text">单 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001019">
-                                    <!----> <label class="mint-button-text">双 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li3"><p style="text-align: center; font-size: 14px;">第四球</p></li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001020">
-                                    <!----> <label class="mint-button-text">大 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001021">
-                                    <!----> <label class="mint-button-text">小 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001022">
-                                    <!----> <label class="mint-button-text">单 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001023">
-                                    <!----> <label class="mint-button-text">双 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li3"><p style="text-align: center; font-size: 14px;">第五球</p></li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001024">
-                                    <!----> <label class="mint-button-text">大 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001025">
-                                    <!----> <label class="mint-button-text">小 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001026">
-                                    <!----> <label class="mint-button-text">单 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105001027">
-                                    <!----> <label class="mint-button-text">双 <span
-                                                style="font-size: 10px; font-weight: bold;">1.99</span></label></button>
-                            </li>
+                                    {{$item['name']}}</p></li>
+
+                                @foreach($item['result'] as $key=>$value)
+                                    @if($value['xp']==0)
+                                    <li class ="container-li2">
+                                        <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                            <!----> <label class="mint-button-text">{{$value['result']}} <span
+                                                        style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                    </li>
+                                    @elseif($value['xp']==1)
+                                        <li class ="container-li1">
+                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                                <!----> <label class="mint-button-text">{{$value['result']}} <span
+                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                        </li>
+                                    @elseif($value['xp']==3)
+                                            <li class ="container-li3">
+                                                <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                                    <!----> <label class="mint-button-text">{{$value['result']}} <span
+                                                                style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                            </li>
+                                        @endif
+                                @endforeach
+                            @endforeach
                         </ul>
                     </div>
                 </div>
+
                 <div class="am-tab-panel am-fade" id="tab2" style="height: 600px" >
                     <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214); " >
                         <ul style="padding: 5px;" >
-                            <li class="container-li3"><p style="text-align: center; font-size: 14px;">第一球</p></li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002001">
-                                    <!----> <label class="mint-button-text">0 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002002">
-                                    <!----> <label class="mint-button-text">1 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002003">
-                                    <!----> <label class="mint-button-text">2 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002004">
-                                    <!----> <label class="mint-button-text">3 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002005">
-                                    <!----> <label class="mint-button-text">4 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002006">
-                                    <!----> <label class="mint-button-text">5 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002007">
-                                    <!----> <label class="mint-button-text">6 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002008">
-                                    <!----> <label class="mint-button-text">7 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002009">
-                                    <!----> <label class="mint-button-text">8 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002010">
-                                    <!----> <label class="mint-button-text">9 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li3" ><p style="text-align: center; font-size: 14px;">第二球</p></li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002011">
-                                    <!----> <label class="mint-button-text">0 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002012">
-                                    <!----> <label class="mint-button-text">1 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002013">
-                                    <!----> <label class="mint-button-text">2 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002014">
-                                    <!----> <label class="mint-button-text">3 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002015">
-                                    <!----> <label class="mint-button-text">4 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002016">
-                                    <!----> <label class="mint-button-text">5 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002017">
-                                    <!----> <label class="mint-button-text">6 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002018">
-                                    <!----> <label class="mint-button-text">7 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002019">
-                                    <!----> <label class="mint-button-text">8 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002020">
-                                    <!----> <label class="mint-button-text">9 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li3" ><p style="text-align: center; font-size: 14px;">第三球</p></li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002021">
-                                    <!----> <label class="mint-button-text">0 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002022">
-                                    <!----> <label class="mint-button-text">1 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002023">
-                                    <!----> <label class="mint-button-text">2 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002024">
-                                    <!----> <label class="mint-button-text">3 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002025">
-                                    <!----> <label class="mint-button-text">4 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002026">
-                                    <!----> <label class="mint-button-text">5 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002027">
-                                    <!----> <label class="mint-button-text">6 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002028">
-                                    <!----> <label class="mint-button-text">7 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002029">
-                                    <!----> <label class="mint-button-text">8 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002030">
-                                    <!----> <label class="mint-button-text">9 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li3"><p style="text-align: center; font-size: 14px;">第四球</p></li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002031">
-                                    <!----> <label class="mint-button-text">0 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002032">
-                                    <!----> <label class="mint-button-text">1 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002033">
-                                    <!----> <label class="mint-button-text">2 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002034">
-                                    <!----> <label class="mint-button-text">3 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002035">
-                                    <!----> <label class="mint-button-text">4 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002036">
-                                    <!----> <label class="mint-button-text">5 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002037">
-                                    <!----> <label class="mint-button-text">6 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002038">
-                                    <!----> <label class="mint-button-text">7 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002039">
-                                    <!----> <label class="mint-button-text">8 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002040">
-                                    <!----> <label class="mint-button-text">9 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li3"><p style="text-align: center; font-size: 14px;">第五球</p></li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002041">
-                                    <!----> <label class="mint-button-text">0 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002042">
-                                    <!----> <label class="mint-button-text">1 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002043">
-                                    <!----> <label class="mint-button-text">2 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002044">
-                                    <!----> <label class="mint-button-text">3 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002045">
-                                    <!----> <label class="mint-button-text">4 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002046">
-                                    <!----> <label class="mint-button-text">5 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002047">
-                                    <!----> <label class="mint-button-text">6 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002048">
-                                    <!----> <label class="mint-button-text">7 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002049">
-                                    <!----> <label class="mint-button-text">8 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105002050">
-                                    <!----> <label class="mint-button-text">9 <span
-                                                style="font-size: 10px; font-weight: bold;">9.9</span></label></button>
-                            </li>
+                            @foreach($big[1]['small'] as $item)
+                                <li class="container-li3"><p
+                                            style="text-align: center; line-height: 30px; vertical-align: top; font-size: 14px;">
+                                        {{$item['name']}}</p></li>
+                                @foreach($item['result'] as $value)
+                                    @if($value['xp']==0)
+                                        <li class ="container-li2">
+                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                                <!----> <label class="mint-button-text">{{$value['result']}} <span
+                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                        </li>
+                                    @elseif($value['xp']==1)
+                                        <li class ="container-li1">
+                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                                <!----> <label class="mint-button-text">{{$value['result']}} <span
+                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                        </li>
+                                    @elseif($value['xp']==3)
+                                        <li class ="container-li3">
+                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                                <!----> <label class="mint-button-text">{{$value['result']}} <span
+                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            @endforeach
                         </ul>
                     </div>
                 </div>
-                <div class="am-tab-panel am-fade" id="tab3">
-                    <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214); ">
-                        <ul style="padding: 5px;">
-                            <li class="container-li3"><p style="text-align: center; font-size: 14px;">前三</p></li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003001">
-                                    <!----> <label class="mint-button-text">豹子 <span
-                                                style="font-size: 10px; font-weight: bold;">75</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003002">
-                                    <!----> <label class="mint-button-text">顺子 <span
-                                                style="font-size: 10px; font-weight: bold;">14.5</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003003">
-                                    <!----> <label class="mint-button-text">对子 <span
-                                                style="font-size: 10px; font-weight: bold;">3.3</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003004">
-                                    <!----> <label class="mint-button-text">半顺 <span
-                                                style="font-size: 10px; font-weight: bold;">2.5</span></label></button>
-                            </li>
-                            <li class="container-button-li3">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003005">
-                                    <!----> <label class="mint-button-text">杂六 <span
-                                                style="font-size: 10px; font-weight: bold;">3</span></label></button>
-                            </li>
-                            <li class="container-li3"><p style="text-align: center; font-size: 14px;">中三</p></li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003006">
-                                    <!----> <label class="mint-button-text">豹子 <span
-                                                style="font-size: 10px; font-weight: bold;">75</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003007">
-                                    <!----> <label class="mint-button-text">顺子 <span
-                                                style="font-size: 10px; font-weight: bold;">14.5</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003008">
-                                    <!----> <label class="mint-button-text">对子 <span
-                                                style="font-size: 10px; font-weight: bold;">3.3</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003009">
-                                    <!----> <label class="mint-button-text">半顺 <span
-                                                style="font-size: 10px; font-weight: bold;">2.5</span></label></button>
-                            </li>
-                            <li class="container-button-li3">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003010">
-                                    <!----> <label class="mint-button-text">杂六 <span
-                                                style="font-size: 10px; font-weight: bold;">3</span></label></button>
-                            </li>
-                            <li class="container-li3"><p style="text-align: center; font-size: 14px;">后三</p></li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003011">
-                                    <!----> <label class="mint-button-text">豹子 <span
-                                                style="font-size: 10px; font-weight: bold;">75</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003012">
-                                    <!----> <label class="mint-button-text">顺子 <span
-                                                style="font-size: 10px; font-weight: bold;">14.5</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003013">
-                                    <!----> <label class="mint-button-text">对子 <span
-                                                style="font-size: 10px; font-weight: bold;">3.3</span></label></button>
-                            </li>
-                            <li class="container-li2">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003014">
-                                    <!----> <label class="mint-button-text">半顺 <span
-                                                style="font-size: 10px; font-weight: bold;">2.5</span></label></button>
-                            </li>
-                            <li class="container-button-li3">
-                                <button class="mint-button mint-button--default mint-button--large" id="105003015">
-                                    <!----> <label class="mint-button-text">杂六 <span
-                                                style="font-size: 10px; font-weight: bold;">3</span></label></button>
-                            </li>
+
+                <div class="am-tab-panel am-fade" id="tab3" style="height: 600px" >
+                    <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214); " >
+                        <ul style="padding: 5px;" >
+                            @foreach($big[2]['small'] as $item)
+                                <li class="container-li3"><p
+                                            style="text-align: center; line-height: 30px; vertical-align: top; font-size: 14px;">
+                                        {{$item['name']}}</p></li>
+                                @foreach($item['result'] as $value)
+                                    @if($value['xp']==0)
+                                        <li class ="container-li2">
+                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                                <!----> <label class="mint-button-text">{{$value['result']}} <span
+                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                        </li>
+                                    @elseif($value['xp']==1)
+                                        <li class ="container-li1">
+                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                                <!----> <label class="mint-button-text">{{$value['result']}} <span
+                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                        </li>
+                                    @elseif($value['xp']==3)
+                                        <li class ="container-li3">
+                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                                <!----> <label class="mint-button-text">{{$value['result']}} <span
+                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            @endforeach
                         </ul>
                     </div>
                 </div>
+
             </div>
         </div>
+
+
         <div class="bottom-bar" style="z-index: 999">
             <ul style="padding: 0px; margin: 0px;">
                 <li style="float: left; margin-left: 3px; margin-top: 3px; margin-bottom: 5px; list-style-type: none;">
