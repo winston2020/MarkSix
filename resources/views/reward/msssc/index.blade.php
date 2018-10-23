@@ -16,6 +16,13 @@
     <style>
         .selected{
             background: red;
+            color: palegoldenrod;
+        }
+        .am-nav-tabs>li{
+            margin-left: 20px;
+        }
+        .yc{
+            display: none;
         }
     </style>
 </head>
@@ -68,64 +75,56 @@
                 <tr>
                     <td height="40px" align="left" style="width: 35%;" id="nowinstallment" >{{$msssc[0]->installment}}期</td>
                     <td align="right" style="width: 70%;">
-                        <!----><font>封盘: <span id="prezero">0</span><span id="m"></span>:<span id="s"></span>
-                            &nbsp;&nbsp;&nbsp;&nbsp;开奖:<span id="kjprezeor">0</span><span id="kjm"></span>:<span id="kjs"></span>
+                        <!----><font>封盘:<span id="s"></span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;开奖:<span id="kjs"></span>
                         </font>
                     </td>
                 </tr>
                 <script>
-                    var m = 0;  //设置分
                     var s = 5;    //设置秒
-                    var kjm = 0;  //设置开奖分
-                    var kjs = 10;    //设置开奖秒
+                    var kjs = 20;    //设置开奖秒
 
                     function showtime(){
-                        document.getElementById('m').innerHTML = m;
+
                         document.getElementById('s').innerHTML = s;
-
-                        s = s-1;
-
+                        if(s>0){
+                            s = s-1;
+                        }
                         console.log('封盘:'+s)
                         if(s==0){   //当时间为0分1秒时，暂停
+                            document.getElementById('s').innerHTML = "封盘中";
                             $('#prezero').attr("style",'color:red')
                             $('#kjprezeor').attr("style",'color:red')
-                            $('#m').attr("style",'color:red')
                             $('#s').attr("style",'color:red')
-                            $('#kjm').attr("style",'color:red')
                             $('#kjs').attr("style",'color:red')
-                            clearInterval(settime);
+                            $(".bottom-bar").addClass("yc");
                         }
+<<<<<<< HEAD
                         if(s<0){
                             alert('12')
                             m = 0
                             s = 0
                         }
 
+=======
+>>>>>>> 2637b88b278da4ad0a8ebc57b12d50eeec2e49c6
                     }
-                    var settime = setInterval(function(){
-                        showtime();
-                    },1000);
 
 
                     function kjtime(){
-                        document.getElementById('kjm').innerHTML = kjm;
                         document.getElementById('kjs').innerHTML = kjs;
                         console.log('开奖:'+kjs)
+                        showtime()
                         kjs = kjs-1;
-                        if(kjs==-1){
-                            kjm = kjm -1;
-                            kjs = 59
-                        }
-                        if(kjm==0 && kjs==0){   //当时间为0分0秒时，暂停
+                        if(kjs<0){   //当时间为0分0秒时，暂停
                             kjm = 0;  //设置分
-                            kjs = 10; //设置秒
-
+                            kjs = 75; //设置秒
+                            s=60;
                             $('#prezero').attr("style",'color:black')
                             $('#kjprezeor').attr("style",'color:black')
-                            $('#m').attr("style",'color:black')
                             $('#s').attr("style",'color:black')
-                            $('#kjm').attr("style",'color:black')
                             $('#kjs').attr("style",'color:black')
+                            $(".bottom-bar").removeClass("yc");
                         }
                     }
 
@@ -138,7 +137,7 @@
         </div>
         <div class="am-tabs" data-am-tabs >
             <ul class="am-tabs-nav am-nav am-nav-tabs">
-                <li class="am-active"><a href="#tab1">两面</a></li>
+                <li class="am-active"><a href="#tab1">两面</a></li>&nbsp;&nbsp;&nbsp;
                 <li><a href="#tab2">1-5球</a></li>
                 <li><a href="#tab3">前中后</a></li>
             </ul>
@@ -293,7 +292,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="am-tab-panel am-fade" id="tab2" >
+                <div class="am-tab-panel am-fade" id="tab2" style="height: 600px" >
                     <div class="mint-tab-container-item" style="border: 1px solid rgb(214, 214, 214); " >
                         <ul style="padding: 5px;" >
                             <li class="container-li3"><p style="text-align: center; font-size: 14px;">第一球</p></li>

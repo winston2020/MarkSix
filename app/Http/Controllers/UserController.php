@@ -22,9 +22,42 @@ class UserController extends Controller
     {
         return view('user.tixian');
     }
-    public function geren()
+    public function information()
     {
-        return view('user.geren');
+        return view('user.information');
+    }
+    public function password()
+    {
+        return view('user.password');
+    }
+    public function message()
+    {
+        return view('user.message');
+    }
+    public function gold()
+    {
+        return view('user.gold');
+    }
+    public function withdraw()
+    {
+        return view('user.withdraw');
+    }
+    public function bank()
+    {
+        return view('user.bank');
+    }
+    public function addbank()
+    {
+        return view('user.addbank');
+    }
+    public function extension()
+    {
+        return view('user.extension');
+    }
+
+    public function service()
+    {
+        return view('user.service');
     }
     public function dologin(Request $request)
     {
