@@ -75,48 +75,47 @@
                 <tr>
                     <td height="40px" align="left" style="width: 35%;" id="nowinstallment" >{{$msssc[0]->installment}}期</td>
                     <td align="right" style="width: 70%;">
-                        <!----><font>封盘: <span id="prezero">0</span><span id="m"></span>:<span id="s"></span>
-                            &nbsp;&nbsp;&nbsp;&nbsp;开奖:<span id="kjprezeor">0</span><span id="kjm"></span>:<span id="kjs"></span>
+                        <!----><font>封盘:<span id="s"></span>
+                            &nbsp;&nbsp;&nbsp;&nbsp;开奖:<span id="kjs"></span>
                         </font>
                     </td>
                 </tr>
                 <script>
                     var s = 5;    //设置秒
-                    var kjs = 10;    //设置开奖秒
+                    var kjs = 20;    //设置开奖秒
 
                     function showtime(){
 
                         document.getElementById('s').innerHTML = s;
-                        s = s-1;
-
+                        if(s>0){
+                            s = s-1;
+                        }
                         console.log('封盘:'+s)
                         if(s==0){   //当时间为0分1秒时，暂停
+                            document.getElementById('s').innerHTML = "封盘中";
                             $('#prezero').attr("style",'color:red')
                             $('#kjprezeor').attr("style",'color:red')
                             $('#s').attr("style",'color:red')
                             $('#kjs').attr("style",'color:red')
-                            $(".bottom-bar").toggleClass("yc");
-                            setTimeout(function(){ s=60 }, 16000);
+                            $(".bottom-bar").addClass("yc");
                         }
                     }
-                    var settime = setInterval(function(){
-                        showtime();
-                    },1000);
 
 
                     function kjtime(){
                         document.getElementById('kjs').innerHTML = kjs;
                         console.log('开奖:'+kjs)
-
+                        showtime()
                         kjs = kjs-1;
                         if(kjs<0){   //当时间为0分0秒时，暂停
                             kjm = 0;  //设置分
                             kjs = 75; //设置秒
+                            s=60;
                             $('#prezero').attr("style",'color:black')
                             $('#kjprezeor').attr("style",'color:black')
                             $('#s').attr("style",'color:black')
                             $('#kjs').attr("style",'color:black')
-                            $(".bottom-bar").toggleClass("yc");
+                            $(".bottom-bar").removeClass("yc");
                         }
                     }
 

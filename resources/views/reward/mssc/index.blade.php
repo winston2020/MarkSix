@@ -1047,18 +1047,18 @@
         </div>
     </div>
 </div>
-<script>
-    $(".mint-tab-container-item>ul>li>button").click(function () {
-        $(this).toggleClass("selected");
-    })
-</script>
-<script>
-    ppp = function () {
-        var idnumber = $('.selected');
-        $("#number").text(idnumber.length)
-    }
-    var t2 = window.setInterval("ppp()", 200);
-</script>
+{{--<script>--}}
+    {{--$(".mint-tab-container-item>ul>li>button").click(function () {--}}
+        {{--$(this).toggleClass("selected");--}}
+    {{--})--}}
+{{--</script>--}}
+{{--<script>--}}
+    {{--ppp = function () {--}}
+        {{--var idnumber = $('.selected');--}}
+        {{--$("#number").text(idnumber.length)--}}
+    {{--}--}}
+    {{--var t2 = window.setInterval("ppp()", 200);--}}
+{{--</script>--}}
 <div class="mint-msgbox-wrapper" style="position: absolute; z-index: 2005;">
     <div class="mint-msgbox" style="display: none;">
         <div class="mint-msgbox-header">
