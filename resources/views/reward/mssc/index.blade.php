@@ -19,10 +19,11 @@
             color: palegoldenrod;
         }
         .am-nav-tabs>li{
-            margin-left: 20px;
+            margin-left: 6px;
         }
         .yc{
-            display: none;
+            pointer-events:none;
+            color: gray;
         }
     </style>
 </head>
@@ -59,7 +60,7 @@
                         <div style="width: 100%;">
                             <ul style="padding: 0px; margin: 0px;">
                                 <li style="float: left; width: 25%; list-style-type: none; text-align: -webkit-center; line-height: 20px;">
-                                    <div class="arrow"></div>
+                                    <div style="font-size: 28px">&bigtriangledown;</div>
                                 </li>
                                 @foreach(str_split($msssc[0]->reward) as $item)
                                     <li style="float: left; width: 15%; list-style-type: none;">
@@ -97,7 +98,7 @@
                             $('#kjprezeor').attr("style",'color:red')
                             $('#s').attr("style",'color:red')
                             $('#kjs').attr("style",'color:red')
-                            $(".bottom-bar").addClass("yc");
+                            $("#xiazhu").addClass("yc");
                         }
                     }
 
@@ -115,7 +116,7 @@
                             $('#kjprezeor').attr("style",'color:black')
                             $('#s').attr("style",'color:black')
                             $('#kjs').attr("style",'color:black')
-                            $(".bottom-bar").removeClass("yc");
+                            $("#xiazhu").removeClass("yc");
                         }
                     }
 
@@ -301,7 +302,7 @@
                                 class="mint-button-text" >重置</label></button>
                 </li>
                 <li style="float: right; margin-right: 3px; margin-top: 9px; list-style-type: none;">
-                    <button class="mint-button mint-button--primary mint-button--normal"><!----> <label
+                    <button class="mint-button mint-button--primary mint-button--normal" id="xiazhu"><!----> <label
                                 class="mint-button-text">下注</label></button><!----></li>
             </ul>
         </div>
