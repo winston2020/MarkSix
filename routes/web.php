@@ -40,7 +40,7 @@ Route::group(['middleware'=>['web']],function(){
     Route::get('reward/msssc','RewardController@msssc');
     Route::get('reward/mssc','RewardController@mssc');
 
-    Route::post('reward/msssc/add','MssscController@createinstallments');
+
 
     Route::get('msssc','MssscController@index');
     Route::get('mssc','MsscController@index');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\MsscResult;
 use App\Msssc;
 use App\MssscBigCategory;
 use App\MssscResult;
@@ -68,12 +69,12 @@ class MssscController extends Controller
 
     public function create_msssc_result()
     {
-        for ($i=0;$i<27;$i++){
-            $res = new MssscResult();
-            $res->big_category = '两面';
-            $res->small_category = '1-5球';
+        for ($i=0;$i<5;$i++){
+            $res = new MsscResult();
+            $res->big_category = 4;
+            $res->small_category = 18;
             $res->result = '1-5球';
-            $res->odds = 1.99;
+            $res->odds = 9.9;
             $res->created_at = '2018-10-23 12:03:43';
             $res->updated_at = '2018-10-23 12:03:43';
             $res->save();
