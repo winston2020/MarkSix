@@ -6,9 +6,6 @@ use App\Mssc;
 use App\MsscBigCategory;
 use App\MsscResult;
 use App\MsscSmallCategory;
-use App\MssscBigCategory;
-use App\MssscSmallCategory;
-use Illuminate\Http\Request;
 
 class MsscController extends Controller
 {
@@ -58,6 +55,12 @@ class MsscController extends Controller
         }else{
             return response()->json(['status'=>500,'data'=>'错误']);
         }
+    }
+
+    public function reckonresult()
+    {
+        $res = Mssc::where([])->orderby('id','desc')->first();
+        dd($res);
     }
 
 }

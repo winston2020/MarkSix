@@ -20,4 +20,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('msssc/result','MssscController@result');
 
 Route::post('reward/msssc/add','MssscController@createinstallments');
+
 Route::post('reward/mssc/add','MsscController@createinstallments');
+Route::post('reward/mssc/reckonresult','MsscController@reckonresult');

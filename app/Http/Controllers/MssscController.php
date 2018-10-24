@@ -64,21 +64,12 @@ class MssscController extends Controller
     {
        $lastresult =  Msssc::where([])->orderby('created_at','desc')->first();
        $current_data =  Result::where(['installment_id'=>$lastresult->id])->get();
-
     }
 
-    public function create_msssc_result()
+    public function reckonresult()
     {
-        for ($i=0;$i<5;$i++){
-            $res = new MsscResult();
-            $res->big_category = 4;
-            $res->small_category = 18;
-            $res->result = '1-5球';
-            $res->odds = 9.9;
-            $res->created_at = '2018-10-23 12:03:43';
-            $res->updated_at = '2018-10-23 12:03:43';
-            $res->save();
-        }
+        $res = Msssc::where([])->orderby('id','desc')->first();
+
     }
 
 
