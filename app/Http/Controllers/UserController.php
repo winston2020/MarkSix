@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\System;
 use App\User;
-use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -90,11 +90,16 @@ class UserController extends Controller
             return response()->json(['status'=>500,'msg'=>'两次密码不一样']);
         }
 
+        $system = System::where([])->first();
+        if ($system->largess = null){
+            $system->largess = 0;
+        }
+
         $user = new User();
         $user->name = $username;
         $user->telphone = $telphone;
         $user->password = $password;
-        $user->price = 0;
+        $user->price = $system->largess;
         $bool = $user->save();
         if ($bool){
             Auth::loginUsingId($user->id);
@@ -107,5 +112,10 @@ class UserController extends Controller
     public function regist()
     {
         return view('user.regist');
+    }
+
+    public function recharge()
+    {
+        return view('user.recharge');
     }
 }

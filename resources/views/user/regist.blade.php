@@ -16,28 +16,6 @@
 
 </head>
 <body>
-
-
-        {{--<form id="dologin"  class="am-form">--}}
-            {{--{{csrf_field()}}--}}
-            {{--<label for="email">用户名:</label>--}}
-            {{--<input type="text" name="name" id="name" value="" placeholder="请输入用户名">--}}
-            {{--<br>--}}
-            {{--<label for="password">手机号:</label>--}}
-            {{--<input type="number" name="telphone" id="telphone" value="" placeholder="请输入手机号">--}}
-            {{--<br>--}}
-            {{--<label for="password">密码:</label>--}}
-            {{--<input type="password" name="password" id="password" value="" placeholder="请输入密码">--}}
-            {{--<br>--}}
-            {{--<label for="password">重复密码:</label>--}}
-            {{--<input type="password" name="repassword" id="repassword" value="" placeholder="请再次输入密码">--}}
-            {{--<br>--}}
-
-            {{--<br />--}}
-            {{--<div class="am-cf">--}}
-                {{--<input type="button" id="login" name="" value="注 册" class="am-btn am-btn-primary am-btn-sm am-fl">--}}
-            {{--</div>--}}
-        {{--</form>--}}
         <header data-am-widget="header"
                 class="am-header am-header-default">
             <div class="am-header-left am-header-nav">
@@ -56,6 +34,7 @@
                 <p style="left: 0%;">请填写您的账号密码</p>
             </div>
             <form id="dologin" method="post"  novalidate="novalidate">
+                {{csrf_field()}}
                 <div>
                     <input type="text" name="name" id="name" class="username valid" placeholder="用户名" autocomplete="off"
                            aria-required="true" aria-invalid="false">
@@ -72,7 +51,7 @@
                     <input type="password" name="repassword" id="repassword" class="password" placeholder="重复密码" oncontextmenu="return false"
                            onpaste="return false">
                 </div>
-                <button id="login" type="submit">注 册</button>
+                <button id="login" type="button">注 册</button>
             </form>
             <a href="login">
                 <button type="button" class="register-tis">已有账号,点击登录</button>
@@ -103,13 +82,21 @@
                        alert('用户名不能为空');
                   }
                   if (telphone == ''){
-                      alert('电话不能为空');
+                      alert('手机号不能为空');
                   }
+                  var pattern=/(^(([0\+]\d{2,3}-)?(0\d{2,3})-)(\d{7,8})(-(\d{3,}))?$)|(^0{0,1}1[3|4|5|6|7|8|9][0-9]{9}$)/;
+                  if(!pattern.test(telphone)) {
+                      alert('手机号不正确');
+                  }
+
                   if (password == ''){
                       alert('密码不能为空');
                   }
                   if(repassword == ''){
-                      alert('重复不能为空');
+                      alert('重复密码不能为空');
+                  }
+                  if (password != repassword){
+                      alert('两次密码不正确');
                   }
                     
                     data = $('#dologin').serialize()

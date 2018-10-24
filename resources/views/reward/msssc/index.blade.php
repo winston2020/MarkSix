@@ -146,21 +146,21 @@
                                 @foreach($item['result'] as $key=>$value)
                                     @if($value['xp']==0)
                                     <li class ="container-li2">
-                                        <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                        <button class="mint-button mint-button--default mint-button--large" value="{{$value['id']}}" id="105001001">
                                             <!----> <label class="mint-button-text">{{$value['result']}} <span
-                                                        style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                                        style="font-size: 10px; font-weight: bold;" >1.99</span></label></button>
                                     </li>
                                     @elseif($value['xp']==1)
                                         <li class ="container-li1">
-                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                            <button class="mint-button mint-button--default mint-button--large" value="{{$value['id']}}" id="105001001">
                                                 <!----> <label class="mint-button-text">{{$value['result']}} <span
-                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                                            style="font-size: 10px; font-weight: bold;" >1.99</span></label></button>
                                         </li>
                                     @elseif($value['xp']==3)
                                             <li class ="container-li3">
-                                                <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                                <button class="mint-button mint-button--default mint-button--large" value="{{$value['id']}}" id="105001001">
                                                     <!----> <label class="mint-button-text">{{$value['result']}} <span
-                                                                style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                                                style="font-size: 10px; font-weight: bold;" >1.99</span></label></button>
                                             </li>
                                         @endif
                                 @endforeach
@@ -179,21 +179,21 @@
                                 @foreach($item['result'] as $value)
                                     @if($value['xp']==0)
                                         <li class ="container-li2">
-                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                            <button class="mint-button mint-button--default mint-button--large" value="{{$value['id']}}" id="105001001">
                                                 <!----> <label class="mint-button-text">{{$value['result']}} <span
-                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                                            style="font-size: 10px; font-weight: bold;" >1.99</span></label></button>
                                         </li>
                                     @elseif($value['xp']==1)
                                         <li class ="container-li1">
-                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                            <button class="mint-button mint-button--default mint-button--large" value="{{$value['id']}}" id="105001001">
                                                 <!----> <label class="mint-button-text">{{$value['result']}} <span
-                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                                            style="font-size: 10px; font-weight: bold;" >1.99</span></label></button>
                                         </li>
                                     @elseif($value['xp']==3)
                                         <li class ="container-li3">
-                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                            <button class="mint-button mint-button--default mint-button--large" value="{{$value['id']}}" id="105001001">
                                                 <!----> <label class="mint-button-text">{{$value['result']}} <span
-                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                                            style="font-size: 10px; font-weight: bold;" >1.99</span></label></button>
                                         </li>
                                     @endif
                                 @endforeach
@@ -212,21 +212,21 @@
                                 @foreach($item['result'] as $value)
                                     @if($value['xp']==0)
                                         <li class ="container-li2">
-                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                            <button class="mint-button mint-button--default mint-button--large" value="{{$value['id']}}" id="105001001">
                                                 <!----> <label class="mint-button-text">{{$value['result']}} <span
-                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                                            style="font-size: 10px; font-weight: bold;" >1.99</span></label></button>
                                         </li>
                                     @elseif($value['xp']==1)
                                         <li class ="container-li1">
-                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                            <button class="mint-button mint-button--default mint-button--large" value="{{$value['id']}}" id="105001001">
                                                 <!----> <label class="mint-button-text">{{$value['result']}} <span
-                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                                            style="font-size: 10px; font-weight: bold;" >1.99</span></label></button>
                                         </li>
                                     @elseif($value['xp']==3)
                                         <li class ="container-li3">
-                                            <button class="mint-button mint-button--default mint-button--large" id="105001001">
+                                            <button class="mint-button mint-button--default mint-button--large" value="{{$value['id']}}" id="105001001">
                                                 <!----> <label class="mint-button-text">{{$value['result']}} <span
-                                                            style="font-size: 10px; font-weight: bold;" value="{{$value['id']}}">1.99</span></label></button>
+                                                            style="font-size: 10px; font-weight: bold;" >1.99</span></label></button>
                                         </li>
                                     @endif
                                 @endforeach
@@ -250,10 +250,11 @@
                             <div class="mint-cell-left"></div>
                             <div class="mint-cell-wrapper">
                                 <div class="mint-cell-title"><!----> <span class="mint-cell-text"></span> <!----></div>
-                                <div class="mint-cell-value"><input placeholder="输入金额" number="true" type="number"
+                                <div class="mint-cell-value">
+                                    <input placeholder="输入金额" number="true" id="money" type="number"
                                                                     class="mint-field-core">
-                                    <div class="mint-field-clear" style="display: none;"><i
-                                                class="mintui mintui-field-error"></i></div>
+                                    <div class="mint-field-clear" style="display: none;">
+                                        <i class="mintui mintui-field-error"></i></div>
                                     <span class="mint-field-state is-default"><i
                                                 class="mintui mintui-field-default"></i></span>
                                     <div class="mint-field-other"></div>
@@ -297,6 +298,7 @@
 </div>
 
 <script>
+    var userdata = {!! \Illuminate\Support\Facades\Auth::user() !!}
     $(function(){
         setInterval(aa,90000);
         function aa(){
@@ -324,6 +326,46 @@
             });
         }
     })
+    $('#xiazhu').click(function(){
+        noteid  = [];
+        $('.selected').each(function(i,n){
+            noteid.push($(this).val());
+        });
+        coin = $('#money').val()
+        if(coin == ''){
+            alert('下注金额不能为空');
+            return
+        }
+
+        if(coin <userdata.price){
+            alert('下注金额不足，请充值');
+            return
+        }
+
+        $.ajax({
+            type:"POST",
+            url:"/api/reward/msssc/addnotedata",
+            data:{note_id:noteid,coin:coin},
+            datatype: "json",
+            beforeSend:function(){
+
+            },
+            success:function(data){
+                alert('下注成功')
+            },
+            complete: function(XMLHttpRequest, textStatus){
+//                    alert(XMLHttpRequest.responseText);
+//                    alert(textStatus);
+            },
+            error: function(){
+
+            }
+        });
+
+    });
+
+
+
 </script>
 </body>
 </html>

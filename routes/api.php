@@ -17,9 +17,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
 Route::post('msssc/result','MssscController@result');
+Route::post('pay/create','PayController@index');
 
 Route::post('reward/msssc/add','MssscController@createinstallments');
+Route::post('reward/msssc/addnotedata','MssscController@add_notedata');
 
 Route::post('reward/mssc/add','MsscController@createinstallments');
 Route::post('reward/mssc/reckonresult','MsscController@reckonresult');

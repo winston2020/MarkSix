@@ -14,7 +14,6 @@
 Route::get('','HomeController@index');
 Route::get('login','UserController@login');
 Route::get('regist','UserController@regist');
-Route::get('active','ActiveController@index');
 Route::get('tixian','UserController@tixian');
 
 Route::get('money','MoneyController@index');
@@ -34,13 +33,12 @@ Route::group(['middleware'=>['web']],function(){
     Route::get('user/withdraw','UserController@withdraw');
     Route::get('user/bank','UserController@bank');
     Route::get('user/addbank','UserController@addbank');
+    Route::get('user/recharge','UserController@recharge');
     Route::get('video/id/{id}','VideoController@show');
     Route::get('video/{tag}','VideoController@videolist');
     Route::get('reward','RewardController@index');
     Route::get('reward/msssc','RewardController@msssc');
     Route::get('reward/mssc','RewardController@mssc');
-
-
 
     Route::get('msssc','MssscController@index');
     Route::get('mssc','MsscController@index');

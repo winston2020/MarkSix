@@ -24,9 +24,14 @@ class MssscController extends Controller
                 $big[$key]['small'][$key1]['result'] = MssscResult::where(['small_category'=>$value['id']])->get()->toArray();
             }
         }
-
+        $paydata['pay_memberid']  = env('StoryPayId');   //商户ID
+        $paydata['pay_orderid'] = 'c'.date("YmdHis").rand(100000,999999);    //订单号
+        $paydata['pay_amount'] = "1000";    //交易金额
+        $paydata['pay_applydate'] = date("Y-m-d H:i:s");  //订单时间
+        $paydata['pay_notifyurl'] = "http://pay.boxq0.cn/aoyoudemo/server.php";   //服务端返回地址
+        $paydata['pay_callbackurl'] = "http://pay.boxq0.cn/aoyoudemo/page.php";  //页面跳转返回地址
         $msssc = Msssc::where([])->orderby('id','desc')->limit(2)->get();
-        return view('reward.msssc.index',compact('msssc','caterote','big'));
+        return view('reward.msssc.index',compact('msssc','caterote','big','paydata'));
     }
 
     public function createinstallments(Request $request) //生成数字发送前端并保存至数据库
@@ -60,17 +65,24 @@ class MssscController extends Controller
          }
     }
 
-    public function result()
-    {
-       $lastresult =  Msssc::where([])->orderby('created_at','desc')->first();
-       $current_data =  Result::where(['installment_id'=>$lastresult->id])->get();
-    }
-
     public function reckonresult()
     {
         $res = Msssc::where([])->orderby('id','desc')->first();
 
     }
+
+    public function add_notedata(Request $request) //下注
+    {
+        $data = $request->input('note_id');
+        dd($data);
+    }
+
+    public function result()
+    {
+        $lastresult =  Msssc::where([])->orderby('created_at','desc')->first();
+        $current_data =  Result::where(['installment_id'=>$lastresult->id])->get();
+    }
+
 
 
 

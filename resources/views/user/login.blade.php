@@ -41,6 +41,7 @@
         <p style="left: 0%;">请填写您的账号密码</p>
     </div>
     <form method="post" id="dologin" novalidate="novalidate">
+        {{csrf_field()}}
         <div>
             <input type="text" name="name" class="username valid" placeholder="用户名" autocomplete="off"
                    aria-required="true" aria-invalid="false">
@@ -49,7 +50,7 @@
             <input type="password" name="password" class="password" placeholder="密码" oncontextmenu="return false"
                    onpaste="return false">
         </div>
-        <button id="login" type="submit">登 陆</button>
+        <button id="login" type="button">登 陆</button>
     </form>
     <a href="/regist">
         <button type="button" class="register-tis">还有没有账号？</button>
