@@ -6,6 +6,7 @@ use App\System;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -90,15 +91,20 @@ class UserController extends Controller
             return response()->json(['status'=>500,'msg'=>'两次密码不一样']);
         }
 
+        $userdata = User::where(['name'=>$username])->first();
+        if ($userdata){
+            return response()->json(['status'=>500,'msg'=>'该用户名已经被注册']);
+        }
+
         $system = System::where([])->first();
-        if ($system->largess = null){
+        if ($system->largess =null){
             $system->largess = 0;
         }
 
         $user = new User();
         $user->name = $username;
         $user->telphone = $telphone;
-        $user->password = $password;
+        $user->password = Hash::make($password);
         $user->price = $system->largess;
         $bool = $user->save();
         if ($bool){

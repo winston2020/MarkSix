@@ -9,11 +9,16 @@ use App\MssscResult;
 use App\MssscSmallCategory;
 use App\Result;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MssscController extends Controller
 {
     public function index()
     {
+        if (!Auth::check()){
+            return redirect('login');
+        }
+
         $big =  MssscBigCategory::all()->toArray();
         foreach ($big as $key=>$item){
             $big[$key]['small'] = MssscSmallCategory::where(['category_id'=>$item['id']])->get()->toArray();
@@ -24,12 +29,7 @@ class MssscController extends Controller
                 $big[$key]['small'][$key1]['result'] = MssscResult::where(['small_category'=>$value['id']])->get()->toArray();
             }
         }
-        $paydata['pay_memberid']  = env('StoryPayId');   //商户ID
-        $paydata['pay_orderid'] = 'c'.date("YmdHis").rand(100000,999999);    //订单号
-        $paydata['pay_amount'] = "1000";    //交易金额
-        $paydata['pay_applydate'] = date("Y-m-d H:i:s");  //订单时间
-        $paydata['pay_notifyurl'] = "http://pay.boxq0.cn/aoyoudemo/server.php";   //服务端返回地址
-        $paydata['pay_callbackurl'] = "http://pay.boxq0.cn/aoyoudemo/page.php";  //页面跳转返回地址
+
         $msssc = Msssc::where([])->orderby('id','desc')->limit(2)->get();
         return view('reward.msssc.index',compact('msssc','caterote','big','paydata'));
     }

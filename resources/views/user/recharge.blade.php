@@ -4,7 +4,6 @@ header("Content-type: text/html; charset=utf-8");
 include 'aoyoudemo/config.php';
 include 'aoyoudemo/PostHelper.php';
 
-
 $pay_bankcode = "933";   //银行编码  902:微信扫码;903:支付宝扫码 ;908:QQ扫码 907 网银
 //扫码
 $native = array(
@@ -26,10 +25,8 @@ $sign = strtoupper(md5($md5str . "key=" . $Md5key));
 $native["pay_md5sign"] = $sign; //签名值
 $native['pay_attach'] = "1234|456"; //附加信息
 $native['pay_productname'] ='充值';
-
 //echo "<pre/>";
 //print_R($native);
-
 
 ?>
 
@@ -98,7 +95,7 @@ $native['pay_productname'] ='充值';
 
             },
             success:function(data){
-                alert('下注成功')
+
             },
             complete: function(XMLHttpRequest, textStatus){
 //                    alert(XMLHttpRequest.responseText);

@@ -327,6 +327,7 @@
         }
     })
     $('#xiazhu').click(function(){
+
         noteid  = [];
         $('.selected').each(function(i,n){
             noteid.push($(this).val());
@@ -337,7 +338,7 @@
             return
         }
 
-        if(coin <userdata.price){
+        if(coin > userdata.price ){
             alert('下注金额不足，请充值');
             return
         }
