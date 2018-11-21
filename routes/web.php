@@ -12,6 +12,7 @@
 */
 
 Route::get('','HomeController@index');
+Route::get('zzz','HomeController@zzz');
 Route::get('login','UserController@login');
 Route::get('regist','UserController@regist');
 Route::get('tixian','UserController@tixian');

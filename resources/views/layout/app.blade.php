@@ -79,7 +79,7 @@
         <li>
             <a href="/user">
                 <span class="am-icon-share-square-o"></span>
-                <span class="am-navbar-label">会员</span>
+                <span class="am-navbar-label">我</span>
             </a>
         </li>
     </ul>

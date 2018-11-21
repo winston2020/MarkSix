@@ -61,8 +61,6 @@
     <a href="#" ><div class="am-u-sm-4"><img src="{{url('images/tuichu.png')}}"><div>退出登录</div></div></a>
 </div>
 
-
-
 <div class="am-navbar am-navbar-default" data-am-widget="navbar">
     <ul class="am-navbar-nav am-cf am-avg-sm-3"><!--导航条是否隐藏多余项的关键参数-->
         <li>
@@ -86,7 +84,7 @@
         <li>
             <a href="/user">
                 <span class="am-icon-share-square-o"></span>
-                <span class="am-navbar-label">会员</span>
+                <span class="am-navbar-label">我</span>
             </a>
         </li>
     </ul>

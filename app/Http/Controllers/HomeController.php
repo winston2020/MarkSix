@@ -12,4 +12,5 @@ class HomeController extends Controller
         $banner = Banner::all();
         return view('welcome',compact('banner'));
     }
+    
 }
